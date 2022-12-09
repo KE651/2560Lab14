@@ -5,6 +5,7 @@ import StateList from '@/components/StateList'
 import AboutSite from '@/components/AboutSite'
 import StateMap from '@/components/StateMap'
 import NotFound from '@/components/NotFound'
+import StatesVisited from '@/components/StatesVisited'
 //import StateDetail from '@/components/StateDetail'
 
 export default createRouter({
@@ -24,6 +25,11 @@ export default createRouter({
             path: '/map/:state', //route for the individual states
             name: 'StateMap',
             component: StateMap
+        },
+        {
+            path: '/states_visited',
+            name: 'StatesVisited',
+            component: StatesVisited
         },
         {
             path:'/:pathMatch(.*)*', // matches any path not matched above

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { response } from 'express'
+// import { response } from 'express'
 export default {
     getAllStates() { // router request to get all the states
         console.log('getAllStates')

@@ -1,11 +1,10 @@
 <template>
     <div>
-        <!-- <states-visited v-bind:states="states"></states-visited> -->
+        <states-visited v-bind:states="states"></states-visited>
         <h3>You have visited {{ totalVisited }} {{ units }}:</h3>
-        <!-- <p id="states-visited-list" v-for="state in states" v-bind:key="state.name">
+        <p id="states-visited-list" v-for="state in states" v-bind:key="state.name">
             {{ state.name }} </p>
-            IT'S NOT THIS CAUSING THE ERRORS
-            -->
+        
         <p id="all-visited-message" v-if="areAllVisited">You have visited everywhere!</p>
     </div>
 </template>
