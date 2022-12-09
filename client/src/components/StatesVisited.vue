@@ -22,6 +22,7 @@ export default {
 
     methods: { // new function similar to fetchAllStates from StateList
         getVisitedStates() { // get list of visited states
+            console.log('getVisitedStates method in StatesVisited.vue')
             this.$stateService.getVisitedStates().then(states => {
                 this.states = states
             }).catch(err => {
@@ -40,6 +41,7 @@ export default {
             }) // end forEach
             return visitedCount, visitedStates
         }, // end totalVisited
+
         areAllVisited() {
             return this.totalVisited === this.states.length  },
         units() {

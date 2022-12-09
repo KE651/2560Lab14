@@ -22,12 +22,12 @@ router.get('/states_visited', function(req, res, next){
         //order: ['name'],
         where: {visited: true}
     }).then(states_visited => {
-        console.log('finding visited states states.js')
+        console.log('finding visited states, states.js')
         if (states_visited) {
             return res.json(states_visited)
-        } else {
-            return res.status(404).send('States visited not found.')
-        }
+        }// else {
+         //   return res.status(404).send('States visited not found.')
+        // }
     }).catch(err => next(err))
  })
 // for list of visited states

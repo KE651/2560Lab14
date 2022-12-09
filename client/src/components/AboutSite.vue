@@ -2,7 +2,8 @@
     <div>
         <h2>Where have you traveled?</h2>
         <p>Keep track of the states you've visited!</p>
-        <p>A Vue.js site by Katrina</p>
+        <br><br>
+        <p>A Vue.js site by Katrina</p><br>
     </div>
 </template>
 

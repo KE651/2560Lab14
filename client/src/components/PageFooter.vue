@@ -14,6 +14,7 @@
             <router-link to="/states_visited">States Visited</router-link>
         </span>
     </div>
+    <br><br>
 <!-- to: attribute must match path attribute in router config -->
     <div class="credits">
     <p class="text-right p-2">Header image by
