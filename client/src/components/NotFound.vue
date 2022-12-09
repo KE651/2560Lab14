@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Regretfully, that page was not found.</h2>
-        <div> id="go-home-link"
+        <div id="go-home-link">
             <!-- provide route -->
             Would you like to 
             <router-link 

@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <states-visited v-bind:states="states"></states-visited>
-        <h3>You have visited {{ totalVisited }} {{ units }}:</h3>
+    <div id="visited">
+       <h3>You have visited {{ totalVisited }} {{ units }}:</h3>
         <p id="states-visited-list" v-for="state in states" v-bind:key="state.name">
-            {{ state.name }} </p>
-        
+            {{ state.name }} </p>   
+        <!-- print states with visited=true-->   
         <p id="all-visited-message" v-if="areAllVisited">You have visited everywhere!</p>
+        <br><br>
     </div>
 </template>
 
@@ -14,13 +14,13 @@ console.log('statesvisited.vue')
 // show the states that have been visited
 export default {
     name: 'StatesVisited',
-    props: {
-        states: Array },
+    data() { return {
+          states: [] }},
     mounted() {
         this.getVisitedStates()
     },
 
-    methods: { // new function similar to fetchAllStates from StateList
+    methods: { // similar to fetchAllStates from StateList
         getVisitedStates() { // get list of visited states
             console.log('getVisitedStates method in StatesVisited.vue')
             this.$stateService.getVisitedStates().then(states => {
@@ -37,13 +37,14 @@ export default {
             this.states.forEach(state => {
                 if (state.visited) {
                     visitedCount++
-                    visitedStates.push(state.name)  }
+                    //visitedStates.push(state.name)  // get from db instead
+                    }
             }) // end forEach
-            return visitedCount, visitedStates
+            return visitedCount//, visitedStates
         }, // end totalVisited
 
-        areAllVisited() {
-            return this.totalVisited === this.states.length  },
+        areAllVisited() { // print at bottom of screen if all states have been visited
+            return this.totalVisited === 51  },
         units() {
             if (this.totalVisited === 1) {
                 return 'state'
@@ -57,6 +58,10 @@ export default {
 
 </script>
 <style scoped>
+#visited {
+    background-color: peachpuff;
+
+}
 #all-visited-message {
     color: purple;
     font-weight: 600; }

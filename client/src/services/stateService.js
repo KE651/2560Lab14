@@ -26,6 +26,6 @@ export default {
         return axios.get('/api/states_visited').then( response => {
             return response.data
         })
-    } // this is not causing the errors
+    } 
 
 }   // calls axios to get/prepare JSON data from the routes that are defined

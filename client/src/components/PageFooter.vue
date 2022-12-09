@@ -1,6 +1,7 @@
 <template>
 <!-- footer template contains links for page and credits for icons -->
 <div class="footer">
+    <br>
     <div class="m-2">
         <span class="p-3">
             <router-link to="/">Home</router-link>
@@ -14,14 +15,14 @@
             <router-link to="/states_visited">States Visited</router-link>
         </span>
     </div>
-    <br><br>
+    <br>
 <!-- to: attribute must match path attribute in router config -->
     <div class="credits">
     <p class="text-right p-2">Header image by
         <a target="_blank" href="https://unsplash.com/photos/1lfI7wkGWZ4">@nasa on Unsplash</a>
     </p> 
     <p><a target="_blank" href="https://icons8.com/icon/114417/map-marker">Map icon</a> by
-    <a target="_blank" href="https://icons8.com">Icons8</a></p>
+    <a target="_blank" href="https://icons8.com">Icons8</a></p> <br>
     </div>
 </div>
 </template>
@@ -33,4 +34,9 @@ export default {
 }
 </script>
 <style scoped>
+.footer {
+    background-color: lightgreen;
+    color: forestgreen;
+    font-weight: bold;
+}
 </style>

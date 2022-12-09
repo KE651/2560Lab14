@@ -13,7 +13,7 @@ export default {
     props: {
         states: Array },
     computed: {
-        totalVisited() {
+        totalVisited() { // count states that were visited
             let visitedCount = 0
             this.states.forEach(state => {
                 if (state.visited) {
@@ -21,7 +21,7 @@ export default {
             }) // end forEach
             return visitedCount
         }, // end totalVisited
-        areAllVisited() {
+        areAllVisited() { // determine if all available states were visited
             return this.totalVisited === this.states.length  },
         units() {
             if (this.totalVisited === 1) {
